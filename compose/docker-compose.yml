@@ -14,10 +14,11 @@ services:
     depends_on:
       - es01
     logging:
-      driver: "json-file"
+      driver: awslogs # CloudWatchLogsへ保存。CloudWatchLogsへの書き込みポリシーをもったIAMロールが必要。
       options:
-        max-size: "10m"
-        max-file: "5"
+        awslogs-region: ap-northeast-1
+        awslogs-group: qiita-search
+        tag: "{{.Name}}" # Log stream (コンテナ名としている)
 
 networks:
   esnet:
