@@ -1,7 +1,7 @@
 version: "3"
 services:
   fess01:
-    image: public.ecr.aws/c4k4h8g1/inayuky/fess:13.12.1
+    image: public.ecr.aws/c4k4h8g1/inayuky/qiita-search/fess:13.12.1
     container_name: fess01
     environment:
       - "ES_HTTP_URL=http://es01:9200"
