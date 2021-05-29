@@ -6,6 +6,7 @@ services:
     environment:
       - "ES_HTTP_URL=http://es01:9200"
       - "FESS_DICTIONARY_PATH=/usr/share/elasticsearch/config/dictionary/"
+      - "TZ=Asia/Tokyo"
     restart: always
     ports:
       - "8080:8080"
